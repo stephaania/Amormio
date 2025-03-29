@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <style>
+        @font-face {
+    font-family: 'MiFuente';
+    src: url('tipografia/DK\ Longreach.otf') format('opentype'); }
+        body { font-family: 'MiFuente', sans-serif; text-align: center; padding: 90px; }
+        .hidden { display: none; }
+        #content { margin-top: 20px; }
+        body {
+    width: 90vw;
+    height: 90vh; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden; }
+
+    
+
+
+    </style>
+</head>
+
+
+
+
+<body>
+    <div id="login">
+        <h2>Ingrese la contraseña</h2>
+        <p>Pista: Es nuestro apodo</p>
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="checkPassword()">Ingresar</button>
+        <p id="error" style="color: red; display: none;">Esa no es almita</p>
+        <p id="error" style="color: rgb(189, 189, 189);">Es con mayuscula en la primera</p>
+    </div>
+    
+    <div id="content" class="hidden">
+        <h1 style="color: rgb(255, 0, 0);">TE AMO</h1>
+        <p>Ten en cuenta que eres lo mas especial de mi existencia.</p>
+        
+    
+        
+    </div>
+  
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = "Almita"; 
+            
+            if (password === correctPassword) {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('content').classList.remove('hidden');
+            } else {
+                document.getElementById('error').style.display = 'block';
+            }
+
+    
+        }
+
+        
+    </script>
+</body>
+</html>
+
+
